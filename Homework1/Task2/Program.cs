@@ -9,9 +9,11 @@ int max = a;
 
 if (a > b)
 {
-    WriteLine(max = a);
+    Write("max= ");
+    WriteLine(a);
 }
 else
 {
-    WriteLine(max = b);
+    Write("max= ");
+    WriteLine(b);
 }

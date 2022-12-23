@@ -6,4 +6,4 @@ int a = int.Parse(ReadLine()!);
 Write("Введите число b: ");
 int b = int.Parse(ReadLine()!);
 
-WriteLine(a * a == b || b * b == a? "является" : "не является");
+WriteLine(a * a == b? "b является квадратом a" : b * b == a? "a является квадратом b" : "не является квадратом");

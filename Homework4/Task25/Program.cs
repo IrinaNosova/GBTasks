@@ -6,6 +6,7 @@
 
 
 using static System.Console;
+Clear();
 
 Write("Введите превое число a: ");
 int.TryParse(ReadLine(), out int a);

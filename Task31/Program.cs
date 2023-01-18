@@ -37,19 +37,9 @@
 // }
 using static System.Console;
 
-int [] arr = GetArray(10);
-int [] arr1 = new int [8];
+int [] arr = GetArray(8);
 
 PrintArray(arr);
-
-
-void FullArray (int [] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(0, 2);
-    }
-}
 
 int[] GetArray (int size)
 {
@@ -65,6 +55,6 @@ void PrintArray (int [] array)
 {
 for (int i = 0; i < array.Length; i++)
 {
-    WriteLine($"{array[i]} ");
+    Write($"{array[i]} ");
 }
 }

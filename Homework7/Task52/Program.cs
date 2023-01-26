@@ -34,7 +34,6 @@ double[] GetAverageColumnArray(int[,] inArray)
     return result;
 }
 
-
 int[,] GetMatrixArray(int rows, int columns, int minValue, int maxValue)
 {
     Random rnd = new Random();
@@ -48,8 +47,6 @@ int[,] GetMatrixArray(int rows, int columns, int minValue, int maxValue)
     }
     return resultArray;
 }
-
-
 
 void PrintMatrixArray(int[,] inArray)
 {

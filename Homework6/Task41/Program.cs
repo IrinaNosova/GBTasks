@@ -7,7 +7,7 @@ using static System.Console;
 Clear();
 
 Write("Введите числа через пробел: ");
-int[] array = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+int[] array = Console.ReadLine()!.Split(' ').Select(x => int.Parse(x)).ToArray();
 
 int Numbers(int[] array)
 {

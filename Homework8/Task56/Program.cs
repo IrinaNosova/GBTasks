@@ -50,17 +50,17 @@ void PrintMatrixArray(int[,] inArray)
 }
 
 
-    for (int i = 0; i < array.GetLength(0); i++)
+for (int i = 0; i < array.GetLength(0); i++)
 {
-          int temp = 0;
-          for (int j = 0; j < array.GetLength(1); j++)
-          {
-                    temp += array[i, j];
-          }
-          if (temp < sum)
-          {
-                    sum = temp;
-                    index = i;
-          }
+    int temp = 0;
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        temp += array[i, j];
+    }
+    if (temp < sum)
+        {
+            sum = temp;
+            index = i;
+        }
 }
 WriteLine("Строка с наименьшей суммой элементов: " + index);

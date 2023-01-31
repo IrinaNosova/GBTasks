@@ -13,7 +13,7 @@ WriteLine();
 WriteLine(PrintNumbers1(10, 5));
 WriteLine(PrintNumbers2(10, 5));
 WriteLine(GetNumbers1(5, 10));
-//Способ 1
+//Печатае правильно, если изначадьно значения поменяли местами. Способ 1
 string PrintNumbers1(int start, int end)
 {
     if (end == start) return start.ToString();
@@ -22,7 +22,7 @@ string PrintNumbers1(int start, int end)
     else
         return $"{PrintNumbers1(end, start - 1)},{start}";
 }
-// Способ 2
+// Печатае правильно, если изначально значения поменяли местами. Способ 2
 string PrintNumbers2(int start, int end)
 {
     if (end == start) return end.ToString();
@@ -30,13 +30,13 @@ string PrintNumbers2(int start, int end)
                          : $"{PrintNumbers2(end, start - 1)},{start}";
 
 }
-// Способ 3
+// Способ 2
 string GetNumbers1(int start, int end)
 {
     return start > end ? (start == end ? start.ToString() : $"{GetNumbers1(start - 1, end)}, {start}")
                        : (end == start ? end.ToString() : $"{GetNumbers1(end - 1, start)}, {end}");
 }
-// Способ 4
+// Способ 1
 void PrintNumbers(int start, int end)
 {
     if (start > end)

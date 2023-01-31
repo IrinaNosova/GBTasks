@@ -18,28 +18,9 @@ int[] intParams = Array.ConvertAll(ReadLine()!.Split(" ", StringSplitOptions.Rem
 int[,] matrix = GetMatrix(intParams[0], intParams[1], intParams[2], intParams[3]);
 PrintMatrix(matrix);
 WriteLine();
-SortRowsMatrix(matrix);
+OrderArrayLines(matrix);
 PrintMatrix(matrix);
 
-
-void SortRowsMatrix(int[,] inMatrix)
-{
-    for (int i = 0; i < inMatrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < inMatrix.GetLength(1) - 1; j++)
-        {
-            for (int k = j + 1; k < inMatrix.GetLength(1); k++)
-            {
-                if (inMatrix[i, j] < inMatrix[i, k])
-                {
-                    int temp = inMatrix[i, k];
-                    inMatrix[i, k] = inMatrix[i, j];
-                    inMatrix[i, j] = temp;
-                }
-            }
-        }
-    }
-}
 int[,] GetMatrix(int rows, int columns, int minValue, int maxValue)
 {
     Random rnd = new Random();
@@ -63,5 +44,25 @@ void PrintMatrix(int[,] inMatrix)
             Write($"{inMatrix[i, j],3} ");
         }
         WriteLine();
+    }
+}
+
+
+void OrderArrayLines(int[,] inArray1)
+{
+    for (int i = 0; i < inArray1.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray1.GetLength(1); j++)
+        {
+            for (int k = 0; k < inArray1.GetLength(1) - 1; k++)
+            {
+                if (inArray1[i, k] < inArray1[i, k + 1])
+                {
+                    int temp = inArray1[i, k + 1];
+                    inArray1[i, k + 1] = inArray1[i, k];
+                    inArray1[i, k] = temp;
+                }
+            }
+        }
     }
 }
